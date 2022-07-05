@@ -18,6 +18,7 @@ package moe.vtbs
 
 import com.google.gson.JsonParser
 import kotlinx.coroutines.runBlocking
+import moe.vtbs.anntation.JvmSuspend
 import moe.vtbs.lang.Context
 import moe.vtbs.lang.annotation.Blocked
 import moe.vtbs.lang.annotation.Network
@@ -71,6 +72,7 @@ object DDCore {
      * @return VtbDetail 详情信息
      */
     @Network
+    @JvmSuspend
     suspend fun getDetailAsync(id: Int): VtbDetail {
         return network.getJObject("https://api.vtbs.moe/v1/detail/$id")
     }

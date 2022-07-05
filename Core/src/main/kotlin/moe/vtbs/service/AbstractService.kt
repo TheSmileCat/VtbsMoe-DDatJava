@@ -16,8 +16,6 @@
  */
 package moe.vtbs.service
 
-import androidx.annotation.CallSuper
-
 /**
  *  抽象服务
  *
@@ -27,7 +25,6 @@ import androidx.annotation.CallSuper
 abstract class AbstractService : Service {
     lateinit var manager: ServiceManager
 
-    @CallSuper
     override fun init(manager: ServiceManager) {
         super.init(manager)
         this.manager = manager

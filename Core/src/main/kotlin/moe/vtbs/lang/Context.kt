@@ -59,7 +59,7 @@ class DefaultContext : Context {
             throw IllegalStateException(
                 """
                 Cannot get baseDir form Android. 
-                Use "moe.vtbs.lang.Context.Companion.setContext(android.content.Context)" to initialize it.
+                Use "Context.Companion.setContext(android.content.Context)" to initialize it.
                 """.trimIndent()
             )
         }
